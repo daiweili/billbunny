@@ -25,6 +25,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'therubyracer'
 
 group :production do
   gem 'pg'
@@ -44,3 +45,4 @@ end
 
 # To use debugger
 # gem 'ruby-debug'
+gem 'omniauth-facebook'
