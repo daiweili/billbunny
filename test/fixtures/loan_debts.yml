@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  uid1: 1
+  uid2: 1
+  amount: 1.5
+  transaction: 
+
+two:
+  uid1: 1
+  uid2: 1
+  amount: 1.5
+  transaction: 

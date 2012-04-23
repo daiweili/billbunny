@@ -1,0 +1,29 @@
+<h1>Listing loan_debts</h1>
+
+<table>
+  <tr>
+    <th>Uid1</th>
+    <th>Uid2</th>
+    <th>Amount</th>
+    <th>Transaction</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @loan_debts.each do |loan_debt| %>
+  <tr>
+    <td><%= loan_debt.uid1 %></td>
+    <td><%= loan_debt.uid2 %></td>
+    <td><%= loan_debt.amount %></td>
+    <td><%= loan_debt.transaction %></td>
+    <td><%= link_to 'Show', loan_debt %></td>
+    <td><%= link_to 'Edit', edit_loan_debt_path(loan_debt) %></td>
+    <td><%= link_to 'Destroy', loan_debt, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Loan debt', new_loan_debt_path %>

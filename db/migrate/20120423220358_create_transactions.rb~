@@ -1,0 +1,12 @@
+class CreateTransactions < ActiveRecord::Migration
+  def change
+    create_table :transactions do |t|
+      t.float :total
+      t.datetime :date
+      t.integer :owner_id
+      t.has_many :loan_debt
+
+      t.timestamps
+    end
+  end
+end

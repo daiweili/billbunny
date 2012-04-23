@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Uid1:</b>
+  <%= @loan_debt.uid1 %>
+</p>
+
+<p>
+  <b>Uid2:</b>
+  <%= @loan_debt.uid2 %>
+</p>
+
+<p>
+  <b>Amount:</b>
+  <%= @loan_debt.amount %>
+</p>
+
+<p>
+  <b>Transaction:</b>
+  <%= @loan_debt.transaction %>
+</p>
+
+
+<%= link_to 'Edit', edit_loan_debt_path(@loan_debt) %> |
+<%= link_to 'Back', loan_debts_path %>

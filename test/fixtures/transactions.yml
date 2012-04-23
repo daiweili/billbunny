@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  total: 1.5
+  date: 2012-04-23 15:03:58
+  owner_id: 1
+  loan_debt: 
+
+two:
+  total: 1.5
+  date: 2012-04-23 15:03:58
+  owner_id: 1
+  loan_debt: 
