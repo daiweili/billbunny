@@ -1,4 +1,8 @@
 Billbunny::Application.routes.draw do
+  resources :transactions
+
+  resources :loan_debts
+
   resources :people
 
   get "home/index"
