@@ -9,17 +9,17 @@
         <div id="user_nav">
           <% if current_user %>
             Welcome <%= current_user.name %>!
+          <br>
+          User id <%= current_user.uid %>
+          <br>
+	        Money owed to <%= current_user.name %> <%= @to_receive %>
+<br>
+	        Money owed by <%= current_user.name %> <%= @to_pay %>
+<br>
             <%= link_to "Sign Out", signout_path %>
-	    <br>
-	    User id <%= current_user.uid %>
-	    <br>
-	    Money owed to <%= current_user.name %> <%= @to_receive %>
-	    <br>
-	    Money owed by <%= current_user.name %> <%= @to_pay %>
-
           <% else %>
             <%= link_to "Sign in with Facebook", "/auth/facebook" %>
-          <% end %>
+            <% end %>
       </div>
     </div>
   </div>

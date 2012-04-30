@@ -40,7 +40,26 @@ class TransactionsController < ApplicationController
   # POST /transactions
   # POST /transactions.json
   def create
+    puts params
+    puts params[:person1]
     @transaction = Transaction.new(params[:transaction])
+
+    person1 = params[:person1]
+    person2 = params[:person2]
+    person3 = params[:person3]
+
+    owner_id = params[:owner_id]
+    total = params[:total]
+    split_amount = total
+
+    authenticity_token = params[:authenticity_token]
+    utf8 = params[:utf8]
+
+    puts split_amount
+    person1_hash = {"uid1"=>owner_id, "uid2"=>"665735064", "amount"=>split_amount}
+    puts person1_hash
+    @person1_entry = LoanDebt.new(person1_hash)
+    @person1_entry.save
 
     respond_to do |format|
       if @transaction.save
