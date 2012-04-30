@@ -50,15 +50,8 @@ class TransactionsController < ApplicationController
 
     owner_id = params[:transaction][:owner_id]
     total = params[:transaction][:total]
-    split_amount = total
+    split_amount = total/3
 
-    authenticity_token = params[:authenticity_token]
-    utf8 = params[:utf8]
-
-    puts "TOTALLLLL = "
-    puts total
-    puts "SPLIT AMOUNTTTT = "
-    puts split_amount
     person1_hash = {"uid1"=>owner_id, "uid2"=>"665735064", "amount"=>split_amount}
     puts person1_hash
     @person1_entry = LoanDebt.new(person1_hash)
