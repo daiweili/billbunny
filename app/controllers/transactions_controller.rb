@@ -48,13 +48,16 @@ class TransactionsController < ApplicationController
     person2 = params[:person2]
     person3 = params[:person3]
 
-    owner_id = params[:owner_id]
-    total = params[:total]
+    owner_id = params[:transaction][:owner_id]
+    total = params[:transaction][:total]
     split_amount = total
 
     authenticity_token = params[:authenticity_token]
     utf8 = params[:utf8]
 
+    puts "TOTALLLLL = "
+    puts total
+    puts "SPLIT AMOUNTTTT = "
     puts split_amount
     person1_hash = {"uid1"=>owner_id, "uid2"=>"665735064", "amount"=>split_amount}
     puts person1_hash

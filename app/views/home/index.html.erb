@@ -13,9 +13,11 @@
           User id <%= current_user.uid %>
           <br>
 	        Money owed to <%= current_user.name %> <%= @to_receive %>
-<br>
+	        <br>
 	        Money owed by <%= current_user.name %> <%= @to_pay %>
-<br>
+            <br>
+            <%= link_to "Create Transaction", transactions_path %>
+            <br>
             <%= link_to "Sign Out", signout_path %>
           <% else %>
             <%= link_to "Sign in with Facebook", "/auth/facebook" %>
