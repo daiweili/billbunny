@@ -50,7 +50,7 @@ class TransactionsController < ApplicationController
 
     owner_id = params[:transaction][:owner_id]
     total = params[:transaction][:total]
-    split_amount = total/3
+    split_amount = total
 
     person1_hash = {"uid1"=>owner_id, "uid2"=>"665735064", "amount"=>split_amount}
     puts person1_hash
